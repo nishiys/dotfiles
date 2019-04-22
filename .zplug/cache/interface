@@ -1,0 +1,6 @@
+bhilburn/powerlevel9k, use:powerlevel9k.zsh-theme
+zplug/zplug, hook-build:zplug --self-manage
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search, defer:3
+zsh-users/zsh-syntax-highlighting, defer:2
