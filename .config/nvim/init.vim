@@ -13,7 +13,6 @@ scriptencoding utf-8
 " 保存時のエンコーディング設定
 set fileencoding=utf-8
 
-
 " ** Visual Settings
 " syntax highlight
 syntax enable
@@ -91,24 +90,24 @@ if has("nvim")
     " :ternimalで起動するshellをzshに設定
     set sh=zsh
     " nvim terminal modeの色をtrue colorで設定できる用にする。
-    let g:terminal_color_0  = "#1b2b34" "black
-    let g:terminal_color_1  = "#ed5f67" "red
-    let g:terminal_color_2  = "#9ac895" "green
-    let g:terminal_color_3  = "#fbc963" "yellow
-    let g:terminal_color_4  = "#669acd" "blue
-    let g:terminal_color_5  = "#c695c6" "magenta
-    let g:terminal_color_6  = "#5fb4b4" "cyan
-    let g:terminal_color_7  = "#c1c6cf" "white
-    let g:terminal_color_8  = "#65737e" "bright black
-    let g:terminal_color_9  = "#fa9257" "bright red
-    let g:terminal_color_10 = "#343d46" "bright green
-    let g:terminal_color_11 = "#4f5b66" "bright yellow
-    let g:terminal_color_12 = "#a8aebb" "bright blue
-    let g:terminal_color_13 = "#ced4df" "bright magenta
-    let g:terminal_color_14 = "#ac7967" "bright cyan
-    let g:terminal_color_15 = "#d9dfea" "bright white
-    let g:terminal_color_background="#1b2b34" "background
-    let g:terminal_color_foreground="#c1c6cf" "foreground
+    " let g:terminal_color_0  = "#1b2b34" "black
+    " let g:terminal_color_1  = "#ed5f67" "red
+    " let g:terminal_color_2  = "#9ac895" "green
+    " let g:terminal_color_3  = "#fbc963" "yellow
+    " let g:terminal_color_4  = "#669acd" "blue
+    " let g:terminal_color_5  = "#c695c6" "magenta
+    " let g:terminal_color_6  = "#5fb4b4" "cyan
+    " let g:terminal_color_7  = "#c1c6cf" "white
+    " let g:terminal_color_8  = "#65737e" "bright black
+    " let g:terminal_color_9  = "#fa9257" "bright red
+    " let g:terminal_color_10 = "#343d46" "bright green
+    " let g:terminal_color_11 = "#4f5b66" "bright yellow
+    " let g:terminal_color_12 = "#a8aebb" "bright blue
+    " let g:terminal_color_13 = "#ced4df" "bright magenta
+    " let g:terminal_color_14 = "#ac7967" "bright cyan
+    " let g:terminal_color_15 = "#d9dfea" "bright white
+    " let g:terminal_color_background="#1b2b34" "background
+    " let g:terminal_color_foreground="#c1c6cf" "foreground
 endif
 
 
@@ -163,13 +162,20 @@ call plug#begin('~/.vim/plugged')
     " ** Colorscheme
     Plug 'tomasr/molokai', {'do': 'cp colors/* ~/.vim/colors/'}
     Plug 'altercation/vim-colors-solarized', {'do': 'cp colors/* ~/.vim/colors/'}
-    Plug 'sickill/vim-monokai', {'do': 'cp colors/* ~/.vim/colors/'}
+    Plug 'crusoexia/vim-monokai', {'do': 'cp colors/* ~/.vim/colors/'}
     Plug 'skielbasa/vim-material-monokai', {'do': 'cp colors/* ~/.vim/colors/'}
     Plug 'phanviet/vim-monokai-pro', {'do': 'cp colors/* ~/.vim/colors/'}
     Plug 'lifepillar/vim-solarized8', {'do': 'cp colors/* ~/.vim/colors/'}
+    Plug 'hzchirs/vim-material', {'do': 'cp colors/* ~/.vim/colors/'}
+    Plug 'kristijanhusak/vim-hybrid-material', {'do': 'cp colors/* ~/.vim/colors/'}
+    Plug 'morhetz/gruvbox', {'do': 'cp colors/* ~/.vim/colors/'} 
+
 
     Plug 'scrooloose/nerdtree' "ディレクトリをTree表示
     Plug 'Yggdroot/indentLine' "インデントを可視化
+
+    " ** enhanced syntax highlight
+    Plug 'octol/vim-cpp-enhanced-highlight' " for C++ syntax highlight
 
     " ** cursor settings
     " Plug 'rhysd/accelerated-jk' " jk移動を加速度的に高速化
@@ -216,6 +222,8 @@ call plug#end()
 " colorscheme molokai
 
 " *** sickill/monokai
+" set termguicolors
+" let g:monokai_term_italic = 1
 " colorscheme monokai
 
 " *** solarized
@@ -230,17 +238,31 @@ call plug#end()
 " " Solarized Light
 " colorscheme solarized8_high
 
-" skielbasa/vim-material-monokai
-set background=dark
-" termnilaのtrue colorを使用
-set termguicolors
-colorscheme material-monokai
-let g:materialmonokai_italic=1
-let g:materialmonokai_subtle_spell=1
+" *** skielbasa/vim-material-monokai
+" set background=dark
+" set termguicolors " termnilaのtrue colorを使用
+" colorscheme material-monokai
+" let g:materialmonokai_italic=1
+" let g:materialmonokai_subtle_spell=1
 
-" --- monokai_pro
+" *** monokai_pro
+set termguicolors
+colorscheme monokai_pro
+
+" *** material --Dark
 " set termguicolors
-" colorscheme monokai_pro
+" set background=dark
+" colorscheme vim-material
+
+" *** hybrid material
+" set termguicolors
+" set background=dark
+" colorscheme hybrid_material
+
+" *** gruvbox
+" set termguicolors
+" set background=dark
+" colorscheme gruvbox
 
 " -------------------------------------------------------------------
 
@@ -250,8 +272,9 @@ let g:airline_powerline_fonts = 1
 " show status line always
 set laststatus=2
 " set colorscheme
-let g:airline_theme='materialmonokai'
+" let g:airline_theme='materialmonokai'
 " let g:airline_theme = 'angr'
+let g:airline_theme='gruvbox'
 " tabline
 let g:airline#extensions#tabline#enabled = 1
 " -----------------------------------------------
@@ -260,7 +283,7 @@ let g:airline#extensions#tabline#enabled = 1
 " -----------------------------------------------
 "  ** NERDTree
 ""隠しファイルをデフォルトで表示
-let NERDTreeShowHidden = 1
+" let NERDTreeShowHidden = 1
 ""デフォルトでツリー表示
 "autocmd VimEnter * execute 'NERDTree'
 " -----------------------------------------------
