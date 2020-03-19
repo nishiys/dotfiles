@@ -41,6 +41,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ### PATH以外の環境変数の設定
 
+# CPATH
+export CPATH=:/usr/local/include/eigen3
+
 #言語設定
 export LANG=ja_JP.UTF-8
 #utcart iranai?

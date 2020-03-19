@@ -1,4 +1,4 @@
-set term qt
+set terminal x11
 set grid
 
 # ------ default line & point style setting -----------
@@ -14,12 +14,12 @@ set linetype cycle 8
 # -----------------------------------------------------
 
 # ------- default font setting -----------------------
-set tics font "Helvetica, 13"
-set xlabel font "Times, 17"
-set ylabel font "Times, 17"
-set y2label font "Times, 17"
-set title font "Palatino, 18"
-set key font "Arial, 14"
+# set tics font "Helvetica, 13"
+# set xlabel font "Times, 17"
+# set ylabel font "Times, 17"
+# set y2label font "Times, 17"
+# set title font "Palatino, 18"
+# set key font "Arial, 14"
 # ----------------------------------------------------
 
 # ------- default margin setting ---------------------
