@@ -1,5 +1,11 @@
 # dotfiles
-
+## gitignore
+```shell
+# create .gitignore and add it
+# delete already existing caches of files which you want to ignore hereafter
+# [あとからまとめて\.gitignoreする方法 \- Qiita](https://qiita.com/yuuAn/items/b1d1df2e810fd6b92574)
+git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`
+```
 ## Homebrew
 ### backup & restoration
 ```shell
