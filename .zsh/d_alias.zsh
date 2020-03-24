@@ -31,8 +31,8 @@ alias mkdir='mkdir -p -v' #(--parents)親子ディレクトリを同時に作成
 # lessはBSD版がないので、macも標準でGNU版
 #export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 #export LESS='-R'
-#alias less='less -m -N -g -i -J --underline-special --SILENT'
-alias less='/usr/share/vim/vim80/macros/less.sh'
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+# alias less='/usr/share/vim/vim80/macros/less.sh'
 
 alias mpiexec="export TMPDIR='/tmp'; mpiexec" #macでは自動で$TMPDIRが決められ、そこに一時ファイルが保存される仕様になっているが、或る日突然$TMPDIRが長すぎるということでmpiexecが通らなくなったのでこのエイリアスを設定した。
 
