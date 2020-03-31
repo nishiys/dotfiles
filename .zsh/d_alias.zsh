@@ -39,3 +39,6 @@ alias mpiexec="export TMPDIR='/tmp'; mpiexec" #macでは自動で$TMPDIRが決�
 
 # vim --> nvim 
 alias vi='nvim'
+
+# for vscode gdb debugging
+alias code='sudo code --user-data-dir="$HOME/.vscode-root" $@'
