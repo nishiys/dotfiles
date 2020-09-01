@@ -54,6 +54,7 @@ pip install -r requirements.txt
 #### Prompt settings
 powerlevel10k would be the best so far. It can be installed by zplug.
 Fonts compatible with powerline are not necessarily required.
+.p10k.zsh will be auto automatically cretaed after installing and initializing the settings. 
 
 
 #### zplug
