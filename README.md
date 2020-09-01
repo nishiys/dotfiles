@@ -50,9 +50,12 @@ pip install -r requirements.txt
 ### zsh
 
 - Create divided files and position them to ~/.zsh
-- 
 
-### zplug
+#### Prompt settings
+powerlevel10k would be the best so far. It can be installed by zplug.
+
+
+#### zplug
 offiical page:
 [zplug/zplug: A next\-generation plugin manager for zsh](https://github.com/zplug/zplug)
 
