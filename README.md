@@ -47,10 +47,13 @@ pip install -r requirements.txt
 ```
 
 ### zplug
+offiical page:
+[zplug/zplug: A next\-generation plugin manager for zsh](https://github.com/zplug/zplug)
+
 install zplug
 
 ```
-curl -fLo ~/.zplug/zplug --create-dirs git.io/zplug
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 ```
 
 
