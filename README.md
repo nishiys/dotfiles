@@ -46,6 +46,12 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
+
+### zsh
+
+- Create divided files and position them to ~/.zsh
+- 
+
 ### zplug
 offiical page:
 [zplug/zplug: A next\-generation plugin manager for zsh](https://github.com/zplug/zplug)
