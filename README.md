@@ -45,3 +45,13 @@ pip freeze > requirements.txt
 # restore
 pip install -r requirements.txt
 ```
+
+### zplug
+install zplug
+
+```
+curl -fLo ~/.zplug/zplug --create-dirs git.io/zplug
+```
+
+
+
